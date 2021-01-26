@@ -4,12 +4,23 @@ import IconButton from "@material-ui/core/IconButton";
 import AppBar from "@material-ui/core/AppBar";
 import ToolBar from "@material-ui/core/ToolBar";
 import MenuIcon from "@material-ui/icons/Menu";
-import { colors } from "@material-ui/core";
+import { colors, List, ListItem } from "@material-ui/core";
 import SideDrawer from "../SideDrawer";
 
 class Header extends Component {
   state = {
     drawerOpen: false,
+    headerShow: false,
+  };
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      this.setState({ headerShow: true });
+    } else {
+      this.setState({ headerShow: false });
+    }
   };
   toggleDrawer = (value) => {
     //console.log(value);
@@ -20,7 +31,7 @@ class Header extends Component {
       <AppBar
         position="fixed"
         style={{
-          backgroundColor: "black",
+          backgroundColor: this.state.headerShow ? "black" : "transparent",
           boxShadow: "none",
           padding: "10px 0px",
         }}
