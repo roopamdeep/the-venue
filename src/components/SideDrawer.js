@@ -10,7 +10,6 @@ const SideDrawer = (props) => {
       open={props.open}
       onClose={() => props.onClose(false)}
     >
-      {" "}
       <List component="nav">
         <ListItem button onClick={() => console.log("featured")}>
           Event Starts In
