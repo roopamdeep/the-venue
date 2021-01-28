@@ -3,6 +3,7 @@ import Featured from "./components/featured";
 import Footer from "./components/header_footer/Footer";
 import Header from "./components/header_footer/Header";
 import Highlights from "./components/Highlights";
+import Pricing from "./components/pricing";
 import Venue from "./components/venue";
 import "./resources/styles.css";
 
@@ -13,6 +14,7 @@ function App() {
       <Featured />
       <Venue />
       <Highlights />
+      <Pricing />
     </div>
   );
 }

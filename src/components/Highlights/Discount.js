@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+import MyButton from "../utils/myButton";
 class Discount extends Component {
   state = {
     discountStart: 0,
@@ -34,6 +35,12 @@ class Discount extends Component {
                 the USA — Iran, Iraq, Libya, Somalia, Sudan, Syria, and Yemen
                 —alongside protest music inspired by Pete Seeger.
               </p>
+              <MyButton
+                text="Purchase Tickets"
+                bck="#ffa800"
+                color="ffffff"
+                link="https://www.google.co.in/"
+              />
             </div>
           </Slide>
         </div>
