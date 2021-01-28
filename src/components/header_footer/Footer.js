@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-class Footer extends Component {
-  state = {};
-  render() {
-    return <p></p>;
-  }
-}
+import Fade from "react-reveal/Fade";
+const Footer = () => {
+  return (
+    <footer className="bck_red">
+      <Fade delay={500}>
+        <div className="font_righteaous footer_logo_venue">The Venue</div>
+        <div className="footer_copyright">
+          The venue 2020. All rights reserved
+        </div>
+      </Fade>
+    </footer>
+  );
+};
 
 export default Footer;
